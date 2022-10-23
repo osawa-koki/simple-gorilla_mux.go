@@ -82,3 +82,17 @@ func getCustomer_int(w http.ResponseWriter, r *http.Request) {
 	id := vars["customer_id"]
 	fmt.Fprint(w, id)
 }
+
+// HTTP動詞によるルーティング制御用ハンドラ関数
+func ofGet(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "I am a GET man")
+}
+func ofPost(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "I am a POST man")
+}
+func ofPut(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "I am a PUT man")
+}
+func ofDelete(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "I am a DELETE man")
+}

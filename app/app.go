@@ -20,6 +20,12 @@ func Start() {
 	router.HandleFunc("/customers/{customer_id}", getCustomer)
 	router.HandleFunc("/customers_int/{customer_id:[0-9]+}", getCustomer_int)
 
+	// HTTP動詞によるルーティング制御
+	router.HandleFunc("/methods", ofGet).Methods(http.MethodGet)
+	router.HandleFunc("/methods", ofPost).Methods(http.MethodPost)
+	router.HandleFunc("/methods", ofPut).Methods(http.MethodPut)
+	router.HandleFunc("/methods", ofDelete).Methods(http.MethodDelete)
+
 	// 第一引数 -> リッスンするアドレス
 	// 第二引数 -> 使用するmultiplexer | デフォルトで用意されているものを使用するため、nilを設定
 	http.ListenAndServe("localhost:8000", router)
