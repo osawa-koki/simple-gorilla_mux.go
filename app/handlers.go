@@ -5,6 +5,8 @@ import (
 	"encoding/xml"
 	"fmt"
 	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 // JSON解析用に使用する構造体の定義
@@ -65,4 +67,18 @@ func getAllCustomers_flex(w http.ResponseWriter, r *http.Request) {
 		w.Header().Add("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(customers)
 	}
+}
+
+func getCustomer(w http.ResponseWriter, r *http.Request) {
+	// パスパラメタを連想配列形式で取得
+	vars := mux.Vars(r)
+	id := vars["customer_id"]
+	fmt.Fprint(w, id)
+}
+
+func getCustomer_int(w http.ResponseWriter, r *http.Request) {
+	// パスパラメタを連想配列形式で取得
+	vars := mux.Vars(r)
+	id := vars["customer_id"]
+	fmt.Fprint(w, id)
 }

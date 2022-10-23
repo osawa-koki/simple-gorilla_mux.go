@@ -17,6 +17,8 @@ func Start() {
 	router.HandleFunc("/customers", getAllCustomers)
 	router.HandleFunc("/customers_xml", getAllCustomers_xml)
 	router.HandleFunc("/customers_flex", getAllCustomers_flex)
+	router.HandleFunc("/customers/{customer_id}", getCustomer)
+	router.HandleFunc("/customers_int/{customer_id:[0-9]+}", getCustomer_int)
 
 	// 第一引数 -> リッスンするアドレス
 	// 第二引数 -> 使用するmultiplexer | デフォルトで用意されているものを使用するため、nilを設定
