@@ -1,10 +1,13 @@
 package app
 
-import "net/http"
+import (
+	"net/http"
+	"github.com/gorilla/mux"
+)
 
 func Start() {
 	// 自身でmultiplexerを登録
-	mux := http.NewServeMux()
+	mux := mux.NewRouter()
 
 	// ハンドラファンクション -> デフォルトmultiplexerに登録。 | 自身で作成したmultiplexerを使用
 	// 第一引数 -> パターン
