@@ -16,3 +16,7 @@ go build -o bin main.go
 ## メモ
 
 プログラムファイルにてあるパッケージをインポートし、「go mod tidy」を実行すると自動でダウンロードしてくれる!!!
+
+## 参考文献
+
+- <https://www.udemy.com/share/103PE43@JyZWqaqer4WCJGGiYgQalepcfxVW38cHTmN7p5IyKIbP0xHR4WVlUMYrBZDi_oGr8g==/>
