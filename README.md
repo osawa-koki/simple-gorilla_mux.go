@@ -24,6 +24,21 @@ docker run -p 80:80 -it --rm --name my-simple-gorilla_mux-go simple-gorilla_mux-
 docker build -t simple-gorilla_mux-go . && docker run -p 80:80 -it --rm --name my-simple-gorilla_mux-go simple-gorilla_mux-go
 ```
 
+## 動作確認
+
+以下のパスにアクセスする。  
+
+- /
+- /greet
+- /customers
+- /customers_xml
+- /customers_flex
+- /methods
+
+customers系には`Accept`ヘッダを`text/xml`と`application/json`に変えてリクエストを送信。  
+
+methodsには複数のHTTPメソッドでリクエストを送信。  
+
 ## メモ
 
 プログラムファイルにてあるパッケージをインポートし、「go mod tidy」を実行すると自動でダウンロードしてくれる!!!  
