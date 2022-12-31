@@ -13,6 +13,9 @@ func Start() {
 	// ハンドラファンクション -> デフォルトmultiplexerに登録。 | 自身で作成したmultiplexerを使用
 	// 第一引数 -> パターン
 	// 第二引数 -> 「レスポンスライター」「リクエスト」を引数として受け取る関数
+	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("Index"))
+	})
 	router.HandleFunc("/greet", greet)
 	router.HandleFunc("/customers", getAllCustomers)
 	router.HandleFunc("/customers_xml", getAllCustomers_xml)
