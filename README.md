@@ -47,7 +47,7 @@ methodsには複数のHTTPメソッドでリクエストを送信。
 
 | キー | バリュー |
 | ---- | ---- |
-| Name | simple-gorilla_mux.go |
+| Name | simple-gorilla_mux-go |
 | Region | Oregon(US West) |
 | Branch | main |
 | Root Directory |  |
