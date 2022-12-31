@@ -1,6 +1,6 @@
 package main
 
-import "github.com/osawa-koki/simple-gorilla_mux.go/app"
+import "example.com/app"
 
 func main() {
 	app.Start()

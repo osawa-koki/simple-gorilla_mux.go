@@ -1,5 +1,5 @@
-module github.com/osawa-koki/simple-gorilla_mux.go
+module example.com
 
-go 1.17
+go 1.19
 
 require github.com/gorilla/mux v1.8.0
