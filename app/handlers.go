@@ -47,7 +47,7 @@ func getAllCustomers_xml(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// レスポンスヘッダにコンテントタイプを指定
-	w.Header().Add("Content-Type", "application/xml")
+	w.Header().Add("Content-Type", "text/xml")
 
 	// XML形式にエンコード
 	xml.NewEncoder(w).Encode(customers)
@@ -60,8 +60,8 @@ func getAllCustomers_flex(w http.ResponseWriter, r *http.Request) {
 		{Name: "Matz", City: "Tsukuba", Zipcode: "305-8577"},
 	}
 
-	if r.Header.Get("Accept") == "application/xml" {
-		w.Header().Add("Content-Type", "application/xml")
+	if r.Header.Get("Accept") == "text/xml" {
+		w.Header().Add("Content-Type", "text/xml")
 		xml.NewEncoder(w).Encode(customers)
 	} else {
 		w.Header().Add("Content-Type", "application/json")
